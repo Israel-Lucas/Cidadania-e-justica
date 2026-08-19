@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cidadania e Justiça | Inscrição</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="card">
+      <header class="site-header">
+        <p>PROJETO DE EXTENSÃO</p>
+      </header>
+      <section class="form-area">
+        <header class="hero">
+          <h1>Cidadania e Justiça</h1>
+          <div class="ornament"><span></span></div>
+          <p class="subtitle">Ficha de Inscrição</p>
+          <p class="event">Encontro dia 14 de setembro · 19h30</p>
+        </header>
+
+        <form id="registration-form" method="POST" novalidate>
+          <input type="hidden" name="_subject" value="Nova inscrição - Cidadania e Justiça" />
+          <input type="hidden" name="_template" value="table" />
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="text" name="_honey" tabindex="-1" autocomplete="off" class="honeypot" />
+          <div class="field field-full">
+            <label for="nome">Nome completo</label>
+            <input id="nome" name="name" type="text" autocomplete="name" required />
+          </div>
+          <div class="field field-full">
+            <label for="ra">RA</label>
+            <input id="ra" name="ra" type="text" inputmode="numeric" autocomplete="off" placeholder="Registro de aluno" required />
+          </div>
+          <div class="field field-full">
+            <label for="email">E-mail</label>
+            <input id="email" name="email" type="email" autocomplete="email" required />
+          </div>
+          <div class="form-grid">
+            <div class="field">
+              <label for="curso">Curso</label>
+              <input id="curso" name="curso" type="text" required />
+            </div>
+            <div class="field select-field">
+              <label for="semestre">Semestre</label>
+              <select id="semestre" name="semestre" required>
+                <option value="" selected disabled>Selecione</option>
+                <option>1º semestre</option>
+                <option>2º semestre</option>
+                <option>3º semestre</option>
+                <option>4º semestre</option>
+                <option>5º semestre</option>
+                <option>6º semestre</option>
+                <option>7º semestre</option>
+                <option>8º semestre</option>
+                <option>9º semestre</option>
+                <option>10º semestre</option>
+              </select>
+            </div>
+          </div>
+          <button type="submit">Enviar inscrição</button>
+          <p class="status" id="status" aria-live="polite"></p>
+          <p class="notice">Ao enviar, seus dados serão encaminhados para a organização.</p>
+        </form>
+      </section>
+      <footer>
+        <div class="footer-line"></div>
+        <img src="./assets/unimep_logo.png" alt="UNIMEP — Universidade Metodista de Piracicaba" />
+      </footer>
+    </main>
+    <div class="modal" id="success-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <div class="modal-content">
+        <span class="checkmark" aria-hidden="true">✓</span>
+        <h2 id="modal-title">Inscrição concluída!</h2>
+        <p>Recebemos seus dados. Em breve, a organização entrará em contato caso seja necessário.</p>
+        <button class="modal-button" id="close-modal" type="button">Entendi</button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
